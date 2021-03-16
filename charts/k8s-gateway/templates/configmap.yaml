@@ -27,6 +27,7 @@ data:
           resources {{ join " " .Values.watchedResources }}
           {{- end }}
         }
+        forward . {{ .Values.upstreamResolver }}
         prometheus 0.0.0.0:9153
         loop
         reload

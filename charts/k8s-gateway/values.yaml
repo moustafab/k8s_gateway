@@ -8,6 +8,11 @@ image:
 # Delegated domain
 domain: ""
 
+# port for loadbalancer
+port: 1053
+
+upstreamResolver: 8.8.8.8
+
 # TTL for non-apex responses (in seconds)
 ttl: 300
 

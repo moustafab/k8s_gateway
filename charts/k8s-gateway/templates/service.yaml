@@ -11,5 +11,8 @@ spec:
   selector:
     {{- include "k8s-gateway.selectorLabels" . | nindent 6 }}
   ports:
-  - {port: 53, protocol: UDP, name: udp-53}
+  - port: {{ .Values.port }}
+    protocol: UDP
+    name: udp-53
+    targetPort: udp-53
   type: LoadBalancer
